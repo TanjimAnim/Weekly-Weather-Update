@@ -37,26 +37,6 @@ const skyiconMap = {
   Fog: SkyconsType.FOG
 };
 
-const getTimeName = () => {
-  const now = new Date();
-  const hour = now.getHours();
-
-  if (hour >= 5 && hour < 12) {
-    return "morn";
-  }
-
-  if (hour >= 12 && hour < 17) {
-    return "day";
-  }
-
-  if (hour >= 17 && hour < 20) {
-    return "eve";
-  }
-
-  if ((hour >= 20 && hour < 23) || (hour >= 0 && hour < 5)) {
-    return "night";
-  }
-};
 
 const fetchDailyWeather = (lat, long) => {
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&exclude=alerts&appid={API_KEY}`;
@@ -84,7 +64,7 @@ function WeatherCard({ item, name }) {
     day: "numeric"
   };
 
-  const timeName = getTimeName();
+
 
   return (
     <Stack
@@ -109,7 +89,7 @@ function WeatherCard({ item, name }) {
 
         <Box>
           <Heading size="lg" alignItems="right">
-            {item.temp[timeName]} &#8451;
+            {item.temp.day} &#8451;
           </Heading>
           <Text size="sm" alignItems="right">
             Feels like: {item.feels_like.day}
