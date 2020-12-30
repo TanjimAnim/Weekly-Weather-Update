@@ -59,7 +59,7 @@ const getTimeName = () => {
 };
 
 const fetchDailyWeather = (lat, long) => {
-  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&exclude=alerts&appid=bda70c96bdc44a7616cfcd73cca72a33`;
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&exclude=alerts&appid={API_KEY}`;
 
   if (dontCallApi) {
     return Promise.resolve(dummyDailyData);
