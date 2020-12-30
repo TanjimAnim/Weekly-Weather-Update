@@ -5,5 +5,5 @@ By clicking on "View more details", It will show the more info such as Sunrise a
 
 A preview of the app: https://1ef14.sse.codesandbox.io/
 
-In the place of API_KEY, please use your own key to run this code. 
+In index.js file inside "pages" folder, in the place of API_KEY, please use your own key to run this code. 
 You can get your api key from here : https://openweathermap.org/api.
