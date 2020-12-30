@@ -24,7 +24,7 @@ import divisions from "../data/divisions";
 import dummyDailyData from "../data/dailyData";
 import Skycons, { SkyconsType } from "react-skycons";
 
-const dontCallApi = true;
+const dontCallApi = true;    //set the value to false to fetch the API.
 
 const initialDivisionId = "3";
 
